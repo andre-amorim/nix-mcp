@@ -1,0 +1,20 @@
+{
+  "name": "nix-mcp",
+  "version": "0.1.0",
+  "description": "Nix flake management and scaffolding tools",
+  "mcpServers": {
+    "nix-mcp": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "${extensionPath}",
+        "run",
+        "nix-mcp"
+      ],
+      "cwd": "${extensionPath}",
+      "env": {
+        "PATH": "${PATH}:${HOME}/.nix-profile/bin:/nix/var/nix/profiles/default/bin"
+      }
+    }
+  }
+}
